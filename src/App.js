@@ -1,17 +1,24 @@
-import './App.css';
-import { useState } from "react"
+import React from 'react'
+import "./components/navbar/navbar.css"
+import NavBar from './components/navbar/NavBar.js';
+import "./components/app.css"
+import Banner from './components/banner/Banner.js';
+import "./components/banner/banner.css"
+import RawPost from './components/RawPost/RawPost.js';
+import {action,orginals,romantic} from './urls.js'
+
 
 function App() {
-  let [state, setState] = useState(false)
   return (
-    <div className="app">
-      <h1 onClick={() => setState(!state)} >click here</h1>
-      {
-        state ? <h3 style={{color:'white'}} >you can see me</h3> : <h3>i am gone</h3>
-      }
+    <div className='App' >
+      <NavBar />
+      <Banner />
+      <RawPost title='Netflix-Orginals'url={orginals}/>
+      <RawPost title='Action Movies' url={action} small />
+      <RawPost title='Romantic Movies' url={romantic} small />
 
     </div>
-  );
+  )
 }
 
 export default App;
