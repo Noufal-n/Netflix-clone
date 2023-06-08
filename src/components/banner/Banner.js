@@ -15,11 +15,11 @@ function Banner() {
             const maxNumber = 20;
             const randomInteger = getRandomInteger(minNumber, maxNumber);
 
-            console.log(randomInteger);
+           // console.log(randomInteger);
 
 
             setMovie(response.data.results[randomInteger])
-            console.log(response.data.results[0])
+           // console.log(response.data.results[0])
         })
 
     }, [])
